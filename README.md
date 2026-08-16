@@ -24,18 +24,22 @@ It is intentionally small but covers the real plugin anatomy:
 
 ### Install
 
+Add this repo as a bundle to the profile you normally run. For the Web UI:
+
 ```sh
 cd /path/to/dsh-plugins
-dsh plugin --profile demo add .
-dsh --profile demo
+dsh plugin --profile web add .
+dsh web
 ```
 
-From the source checkout:
+For the one-shot headless profile:
 
 ```sh
-pnpm dsh plugin --profile demo add .
-pnpm dsh --profile demo
+dsh plugin --profile headless add .
+dsh --profile headless "Look out of your tiny window. What time of day is it?"
 ```
+
+From a DeepSeek Harness source checkout, use `pnpm dsh ...` instead of `dsh ...`.
 
 Then try one of these prompts:
 
