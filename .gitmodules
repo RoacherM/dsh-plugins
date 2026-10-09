@@ -1,0 +1,48 @@
+[submodule "agent-watchdog-plugin"]
+	path = agent-watchdog-plugin
+	url = https://github.com/RoacherM/agent-watchdog-plugin.git
+[submodule "autoproject-plugin"]
+	path = autoproject-plugin
+	url = https://github.com/RoacherM/autoproject-plugin.git
+[submodule "browser-use-plugin"]
+	path = browser-use-plugin
+	url = https://github.com/RoacherM/browser-use-plugin.git
+[submodule "canvas-plugin"]
+	path = canvas-plugin
+	url = https://github.com/RoacherM/canvas-plugin.git
+[submodule "connectors-plugin"]
+	path = connectors-plugin
+	url = https://github.com/RoacherM/connectors-plugin.git
+[submodule "dsh-pair"]
+	path = dsh-pair
+	url = https://github.com/RoacherM/dsh-pair.git
+[submodule "dsh-plugin-tiny-window"]
+	path = dsh-plugin-tiny-window
+	url = https://github.com/RoacherM/dsh-plugin-tiny-window.git
+[submodule "magpie-tool-images-plugin"]
+	path = magpie-tool-images-plugin
+	url = https://github.com/RoacherM/magpie-tool-images-plugin.git
+[submodule "official-use-bundle"]
+	path = official-use-bundle
+	url = https://github.com/RoacherM/official-use-bundle.git
+[submodule "pomodoro-plugin"]
+	path = pomodoro-plugin
+	url = https://github.com/RoacherM/pomodoro-plugin.git
+[submodule "remote-machine-plugin"]
+	path = remote-machine-plugin
+	url = https://github.com/RoacherM/remote-machine-plugin.git
+[submodule "scheduler-plugin"]
+	path = scheduler-plugin
+	url = https://github.com/RoacherM/scheduler-plugin.git
+[submodule "skills-center-plugin"]
+	path = skills-center-plugin
+	url = https://github.com/RoacherM/skills-center-plugin.git
+[submodule "usage-plugin"]
+	path = usage-plugin
+	url = https://github.com/RoacherM/usage-plugin.git
+[submodule "web-fetch-plugin"]
+	path = web-fetch-plugin
+	url = https://github.com/RoacherM/web-fetch-plugin.git
+[submodule "whale-pet-plugin"]
+	path = whale-pet-plugin
+	url = https://github.com/RoacherM/whale-pet-plugin.git

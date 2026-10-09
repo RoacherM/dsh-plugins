@@ -1,82 +1,57 @@
 # dsh-plugins
 
-My personal collection of DeepSeek Harness plugins.
+My personal collection of [DeepSeek Harness](https://github.com/deepseek-ai/dsh) plugins. Each plugin lives in its own repository and is included here as a Git submodule.
 
-## dsh-plugin-tiny-window
+## Plugins
 
-A creative hello-world plugin: your agent gets a tiny window in its workspace. The plugin registers a `look_outside` tool that paints the current time-of-day scene (`dawn` / `day` / `dusk` / `night`) as emoji or ASCII art.
+| Directory | Package | Description |
+|---|---|---|
+| [agent-watchdog-plugin](agent-watchdog-plugin/) | `@local/dsh-agent-watchdog` | Watches the running agent turn for retry loops, repeated failures, file churn, and hangs |
+| [autoproject-plugin](autoproject-plugin/) | `@local/dsh-autoproject` | Unattended, independently reviewed improvement ratchet on a local git repo |
+| [browser-use-plugin](browser-use-plugin/) | `@local/dsh-browser-use` | `browser_*` agent tools that drive the built-in right-sidebar browser |
+| [canvas-plugin](canvas-plugin/) | `@local/dsh-canvas` | Infinite canvas in the right sidebar with Seedream/Seedance image and video generation |
+| [connectors-plugin](connectors-plugin/) | `@local/dsh-connectors` | MCP servers (remote OAuth or local stdio) and a built-in email connector |
+| [dsh-pair](dsh-pair/) | `dsh-pair-workspace` | Pair programming workspace |
+| [dsh-plugin-tiny-window](dsh-plugin-tiny-window/) | `dsh-plugin-tiny-window` | Hello-world starter plugin: gives the agent a tiny window with a `look_outside` tool |
+| [magpie-tool-images-plugin](magpie-tool-images-plugin/) | `@local/dsh-magpie-tool-images` | Lets models behind the Magpie proxy see images returned by tools |
+| [official-use-bundle](official-use-bundle/) | `@local/dsh-official-use` | Official DSH browser use (Playwright MCP) + computer use (Cua Driver MCP) providers |
+| [pomodoro-plugin](pomodoro-plugin/) | `@local/dsh-pomodoro` | Pomodoro timer integrated into DSH |
+| [remote-machine-plugin](remote-machine-plugin/) | `@local/dsh-remote-machine` | Multi-computer remote execution with `computer_id` tools for screenshots and managed commands |
+| [scheduler-plugin](scheduler-plugin/) | `@local/dsh-scheduler` | Scheduled agent tasks: each run starts a fresh session in a target workspace |
+| [skills-center-plugin](skills-center-plugin/) | `@local/dsh-skills` | Skills Hub: discover, inspect, and manage installed built-in and third-party skills |
+| [usage-plugin](usage-plugin/) | `@local/dsh-usage` | Usage dashboard: tokens, calls, cache hits, latency, errors, and cost per model and tool |
+| [web-fetch-plugin](web-fetch-plugin/) | `@local/dsh-web-fetch` | Web fetch tools for agents |
+| [whale-pet-plugin](whale-pet-plugin/) | `@local/dsh-whale-pet` | Pixel whale pet in the session header that reacts to the agent's work |
 
-It is intentionally small but covers the real plugin anatomy:
-
-- `name` / `inject` — a Cordis plugin module
-- Schemastery `Config` — user-configurable values with defaults
-- `ctx.systemPrompt.section()` — a model-visible prompt contribution
-- `ctx.tools.register()` — a raw JSON-Schema model-facing tool
-- `package.json` `dsh.bundle` + `cordis.patch.yml` — an installable dsh bundle
-
-```
-       \   |   /
-    ---( o )---
-       /   |   \
-~~~~~ hills ~~~~~
-    [ dawn ]
-```
-
-### Install
-
-Add this repo as a bundle to the profile you normally run. For the Web UI:
-
-```sh
-cd /path/to/dsh-plugins
-dsh plugin --profile web add .
-dsh web
-```
-
-For the one-shot headless profile:
+## Clone with submodules
 
 ```sh
-dsh plugin --profile headless add .
-dsh --profile headless "Look out of your tiny window. What time of day is it?"
+git clone --recurse-submodules https://github.com/RoacherM/dsh-plugins.git
 ```
 
-From a DeepSeek Harness source checkout, use `pnpm dsh ...` instead of `dsh ...`.
-
-Then try one of these prompts:
-
-- `Look out of your tiny window. What time of day is it?`
-- `Draw what you can see outside, ASCII style.`
-- `I need a tiny break — what's the view?`
-
-### Configure
-
-Edit the profile layer, or patch the row:
-
-```yaml
-- id: tiny-window
-  config:
-    timezoneOffset: 8   # UTC offset used for the local hour
-    style: emoji        # emoji | ascii
-    windowTitle: tiny window
-```
-
-| Field | Default | Meaning |
-| --- | --- | --- |
-| `timezoneOffset` | `8` | UTC offset for the window's local time |
-| `style` | `emoji` | Default scene style: `emoji` or `ascii` |
-| `windowTitle` | `tiny window` | Name used in prompt and tool output |
-
-### Develop and test
+To update all submodules to their latest commits:
 
 ```sh
-npm install
-npm test
+git submodule update --remote --merge
 ```
 
-No build step is needed: the package ships plain ESM JavaScript. Register the repo topic `dsh-plugin` if you make it public.
+## Development
 
-### Where the concepts come from
+See [AGENTS.md](AGENTS.md) for the plugin development conventions used across all repos in this collection.
 
-- First plugin: `docs/user/develop/basic/` in the DeepSeek Harness repo
-- Tool authoring: `docs/cookbook/adding-a-tool.md`
-- Bundles: `docs/user/develop/basic/publish.md`
-- Extension-point map: `docs/cookbook/extension-cookbook.md`
+Each plugin follows the standard DSH bundle layout:
+
+```
+plugin-name/
+  package.json        # npm package with dsh.bundle field
+  cordis.patch.yml    # Cordis patch declaring the plugin entry
+  index.js            # Plugin entry point (or src/ with a build step)
+  README.md           # Plugin-specific docs
+```
+
+Install a plugin into a DSH profile:
+
+```sh
+cd /path/to/plugin-name
+dsh plugin --profile <profile> add .
+```
