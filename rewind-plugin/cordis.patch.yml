@@ -1,0 +1,3 @@
+- insert:
+    - id: dsh-rewind
+      name: '@local/dsh-rewind'
