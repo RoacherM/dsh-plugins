@@ -1,0 +1,406 @@
+{
+  "sessions": [
+    {
+      "promptCount": 4,
+      "toolCount": 38,
+      "fileCount": 5,
+      "testFails": 0,
+      "commits": 1,
+      "errors": 0,
+      "delegates": 0,
+      "prompts": [
+        {
+          "t": 1792375920000,
+          "text": "Build a timeline of my local coding agents."
+        },
+        {
+          "t": 1792376400000,
+          "text": "Keep the scan incremental and local."
+        },
+        {
+          "t": 1792377720000,
+          "text": "Group sessions by day and by project."
+        },
+        {
+          "t": 1792378500000,
+          "text": "Add a scan-now button and a range filter."
+        }
+      ],
+      "files": [
+        "src/host/scan.js",
+        "src/host/timeline.js",
+        "src/client/page.jsx",
+        "test/host.test.mjs",
+        "README.md"
+      ],
+      "commands": [
+        {
+          "text": "npm test",
+          "ok": true,
+          "at": 1792378680000
+        },
+        {
+          "text": "node build.mjs",
+          "ok": true,
+          "at": 1792377000000
+        },
+        {
+          "text": "git status --short",
+          "ok": true,
+          "at": 1792378920000
+        }
+      ],
+      "key": "dsh:a",
+      "agent": "dsh",
+      "id": "a",
+      "title": "Trajecable: scan local agent logs",
+      "summary": "Built the trajecable plugin: scan adapters for seven agents, a local index, timeline API and the sidebar page.",
+      "summaryProgress": "Scanning and filters are done; agent-written session summaries are being added.",
+      "summaryState": "ongoing",
+      "project": "trajecable",
+      "cwd": "/Users/byronwayne/Projects/sides/dsh-plugins/trajecable-plugin",
+      "branch": "main",
+      "model": "deepseek-v4",
+      "origin": "user",
+      "start": 1792375920000,
+      "end": 1792379160000,
+      "testRuns": 2
+    },
+    {
+      "promptCount": 5,
+      "toolCount": 22,
+      "fileCount": 2,
+      "testFails": 1,
+      "commits": 0,
+      "errors": 1,
+      "delegates": 0,
+      "prompts": [
+        {
+          "t": 1792371840000,
+          "text": "Splash needs 22 GB for Qwen3.8 and dies on a 24 GB machine."
+        },
+        {
+          "t": 1792372680000,
+          "text": "Quantize the KV cache and keep the API stable."
+        }
+      ],
+      "files": [
+        "server/runner.py",
+        "server/quantize.py"
+      ],
+      "commands": [
+        {
+          "text": "pytest -q tests/test_runner.py",
+          "ok": false,
+          "at": 1792373580000
+        },
+        {
+          "text": "python -m splash serve --model Qwen3.8",
+          "ok": true,
+          "at": 1792374360000
+        }
+      ],
+      "key": "claude:b",
+      "agent": "claude",
+      "id": "b",
+      "title": "Qwen3.8 Splash 内存不足",
+      "summary": "Quantized the Qwen3.8 KV cache so the model fits a 24 GB machine while keeping the server API stable.",
+      "summaryProgress": "A pytest run still fails; the quantizer edge case is next.",
+      "summaryState": "blocked",
+      "project": "splash",
+      "cwd": "/Users/byronwayne/Projects/splash",
+      "branch": "fix/oom",
+      "model": "claude-opus-4-6",
+      "origin": "user",
+      "start": 1792371840000,
+      "end": 1792374660000,
+      "testRuns": 3
+    },
+    {
+      "promptCount": 8,
+      "toolCount": 41,
+      "fileCount": 3,
+      "testFails": 0,
+      "commits": 1,
+      "errors": 0,
+      "delegates": 0,
+      "prompts": [
+        {
+          "t": 1792323300000,
+          "text": "Compare the clip pipeline with the motus-dev skills."
+        }
+      ],
+      "files": [
+        "src/clip/pipeline.ts",
+        "src/clip/render.ts",
+        "docs/pipeline.md"
+      ],
+      "commands": [
+        {
+          "text": "pnpm test",
+          "ok": true,
+          "at": 1792325400000
+        },
+        {
+          "text": "git commit -m \"docs: tighten pipeline notes\"",
+          "ok": true,
+          "at": 1792326420000
+        }
+      ],
+      "key": "codex:c",
+      "agent": "codex",
+      "id": "c",
+      "title": "Review the clip pipeline style",
+      "summary": "Compared the clip pipeline with the motus-dev skills and wrote notes on where the style diverges.",
+      "summaryProgress": "The review is complete; no code changes were needed.",
+      "summaryState": "done",
+      "project": "storyforge",
+      "cwd": "/Users/byronwayne/Projects/formless/storyforge",
+      "branch": "main",
+      "model": "gpt-6",
+      "origin": "subagent",
+      "start": 1792323300000,
+      "end": 1792326720000,
+      "testRuns": 1
+    },
+    {
+      "promptCount": 3,
+      "toolCount": 17,
+      "fileCount": 2,
+      "testFails": 0,
+      "commits": 0,
+      "errors": 0,
+      "delegates": 0,
+      "prompts": [
+        {
+          "t": 1792303320000,
+          "text": "PNG export is blurry on Retina screens."
+        }
+      ],
+      "files": [
+        "src/export.js",
+        "src/board.jsx"
+      ],
+      "commands": [
+        {
+          "text": "npm test",
+          "ok": true,
+          "at": 1792307040000
+        }
+      ],
+      "key": "dsh:d",
+      "agent": "dsh",
+      "id": "d",
+      "title": "Canvas export at 2x",
+      "project": "canvas",
+      "cwd": "/Users/byronwayne/Desktop/DSH/canvas-plugin",
+      "branch": "main",
+      "model": "deepseek-v4",
+      "origin": "user",
+      "start": 1792303320000,
+      "end": 1792307880000,
+      "testRuns": 2
+    },
+    {
+      "promptCount": 2,
+      "toolCount": 8,
+      "fileCount": 0,
+      "testFails": 0,
+      "commits": 0,
+      "errors": 0,
+      "delegates": 1,
+      "prompts": [
+        {
+          "t": 1792140000000,
+          "text": "Review the scan loop for repeated failures."
+        }
+      ],
+      "files": [],
+      "commands": [
+        {
+          "text": "npm test",
+          "ok": true,
+          "at": 1792140720000
+        }
+      ],
+      "key": "dsh:e",
+      "agent": "dsh",
+      "id": "e",
+      "title": "Guardian review: retry loop",
+      "project": "trajecable",
+      "cwd": "/Users/byronwayne/Projects/sides/dsh-plugins/trajecable-plugin",
+      "branch": "main",
+      "model": "deepseek-v4",
+      "origin": "guardian_review",
+      "start": 1792140000000,
+      "end": 1792141080000,
+      "testRuns": 1
+    },
+    {
+      "key": "pi:p",
+      "agent": "pi",
+      "id": "p",
+      "title": "Subagents in a fresh worktree",
+      "project": "storyforge-e2e",
+      "cwd": "/Users/byronwayne/Projects/formless/storyforge-e2e",
+      "branch": "main",
+      "model": "pi-0.84",
+      "origin": "user",
+      "start": 1792242000000,
+      "end": 1792243320000,
+      "promptCount": 3,
+      "toolCount": 18,
+      "fileCount": 4,
+      "testRuns": 2,
+      "testFails": 0,
+      "commits": 0,
+      "errors": 0,
+      "delegates": 0,
+      "prompts": [
+        {
+          "t": 1792242000000,
+          "text": "Can subagents work in a fresh worktree?"
+        },
+        {
+          "t": 1792242480000,
+          "text": "Keep the parent folder clean."
+        },
+        {
+          "t": 1792242960000,
+          "text": "Run the focused tests."
+        }
+      ],
+      "files": [
+        "src/worktree.js",
+        "src/child.js",
+        "test/worktree.test.js",
+        "notes.md"
+      ],
+      "commands": [
+        {
+          "text": "npm test",
+          "ok": true,
+          "at": 1792243200000
+        }
+      ]
+    },
+    {
+      "key": "epi:e",
+      "agent": "epi",
+      "id": "e",
+      "title": "Compare Epi session storage",
+      "project": "epi",
+      "cwd": "/Users/byronwayne/Projects/sides/epi",
+      "branch": "main",
+      "model": "deepseek-flash",
+      "origin": "user",
+      "start": 1792312200000,
+      "end": 1792313040000,
+      "promptCount": 1,
+      "toolCount": 9,
+      "fileCount": 0,
+      "testRuns": 0,
+      "testFails": 0,
+      "commits": 0,
+      "errors": 0,
+      "delegates": 0,
+      "prompts": [
+        {
+          "t": 1792312200000,
+          "text": "Is the local Epi version up to date?"
+        }
+      ],
+      "files": [],
+      "commands": [
+        {
+          "text": "epi --version",
+          "ok": true,
+          "at": 1792312320000
+        }
+      ]
+    },
+    {
+      "key": "grok:g",
+      "agent": "grok",
+      "id": "g",
+      "title": "M5 Pro local model setup",
+      "project": "mmp",
+      "cwd": "/Users/byronwayne/Desktop/Projects/sides/mmp",
+      "branch": "pi-087-upgrade",
+      "model": "grok-4.6",
+      "origin": "user",
+      "start": 1792227600000,
+      "end": 1792230480000,
+      "promptCount": 5,
+      "toolCount": 32,
+      "fileCount": 15,
+      "testRuns": 0,
+      "testFails": 0,
+      "commits": 1,
+      "errors": 6,
+      "delegates": 0,
+      "prompts": [
+        {
+          "t": 1792227600000,
+          "text": "Help me configure Ollama on the new machine."
+        }
+      ],
+      "files": [
+        "README.md",
+        "scripts/setup.sh",
+        "docker-compose.yml"
+      ],
+      "commands": [
+        {
+          "text": "ollama pull qwen",
+          "ok": false,
+          "at": 1792228800000
+        }
+      ]
+    },
+    {
+      "key": "antigravity:a",
+      "agent": "antigravity",
+      "id": "a",
+      "title": "Video skills research",
+      "project": "storyforge",
+      "cwd": "/Users/byronwayne/Desktop/Projects/formless/storyforge",
+      "branch": "",
+      "model": "",
+      "origin": "user",
+      "start": 1792159200000,
+      "end": 1792159920000,
+      "promptCount": 1,
+      "toolCount": 0,
+      "fileCount": 0,
+      "testRuns": 0,
+      "testFails": 0,
+      "commits": 0,
+      "errors": 0,
+      "delegates": 0,
+      "prompts": [
+        {
+          "t": 1792159200000,
+          "text": "Compare the available video editing skills."
+        }
+      ],
+      "files": [],
+      "commands": []
+    }
+  ],
+  "scan": {
+    "scanning": false,
+    "startedAt": 1792397826822,
+    "endedAt": 1792397886822,
+    "error": null,
+    "progress": {
+      "done": 361,
+      "total": 361
+    },
+    "lastScanAt": 1792397886822
+  },
+  "indexed": {
+    "sessions": 733,
+    "files": 713
+  }
+}
