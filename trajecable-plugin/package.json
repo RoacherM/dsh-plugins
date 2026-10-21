@@ -1,7 +1,7 @@
 {
   "name": "@local/dsh-trajecable",
   "version": "0.7.3",
-  "description": "Race Control & Stage Log for local coding agents: 45° overhead Sector Cam, completion scores, decisions and AI comments",
+  "description": "Formula: daily race log of local coding agents with AI review scores, and a live chat HUD whose speed is tokens per second",
   "private": true,
   "type": "module",
   "main": "dist/host.js",

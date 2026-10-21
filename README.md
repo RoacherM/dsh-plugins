@@ -13,12 +13,15 @@ My personal collection of [DeepSeek Harness](https://github.com/deepseek-ai/dsh)
 | [connectors-plugin](connectors-plugin/) | `@local/dsh-connectors` | MCP servers (remote OAuth or local stdio) and a built-in email connector |
 | [dsh-pair](dsh-pair/) | `dsh-pair-workspace` | Pair programming workspace |
 | [dsh-plugin-tiny-window](dsh-plugin-tiny-window/) | `dsh-plugin-tiny-window` | Hello-world starter plugin: gives the agent a tiny window with a `look_outside` tool |
+| [issue-plugin](issue-plugin/) | `@local/dsh-issue` | One-click issue reports: screen capture, console log, page snapshot and layout facts saved to a local folder |
 | [magpie-tool-images-plugin](magpie-tool-images-plugin/) | `@local/dsh-magpie-tool-images` | Lets models behind the Magpie proxy see images returned by tools |
 | [official-use-bundle](official-use-bundle/) | `@local/dsh-official-use` | Official DSH browser use (Playwright MCP) + computer use (Cua Driver MCP) providers |
 | [pomodoro-plugin](pomodoro-plugin/) | `@local/dsh-pomodoro` | Pomodoro timer integrated into DSH |
 | [remote-machine-plugin](remote-machine-plugin/) | `@local/dsh-remote-machine` | Multi-computer remote execution with `computer_id` tools for screenshots and managed commands |
+| [rewind-plugin](rewind-plugin/) | `@local/dsh-rewind` | Copy, edit, retry, or branch from any user message, and continue from any step of a turn |
 | [scheduler-plugin](scheduler-plugin/) | `@local/dsh-scheduler` | Scheduled agent tasks: each run starts a fresh session in a target workspace |
 | [skills-center-plugin](skills-center-plugin/) | `@local/dsh-skills` | Skills Hub: discover, inspect, and manage installed built-in and third-party skills |
+| [trajecable-plugin](trajecable-plugin/) | `@local/dsh-trajecable` | Formula: daily race log of local coding agents, and a live chat HUD whose speed is tokens per second |
 | [usage-plugin](usage-plugin/) | `@local/dsh-usage` | Usage dashboard: tokens, calls, cache hits, latency, errors, and cost per model and tool |
 | [web-fetch-plugin](web-fetch-plugin/) | `@local/dsh-web-fetch` | Web fetch tools for agents |
 | [whale-pet-plugin](whale-pet-plugin/) | `@local/dsh-whale-pet` | Pixel whale pet in the session header that reacts to the agent's work |
