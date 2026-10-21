@@ -1,7 +1,7 @@
 {
   "name": "@local/dsh-rewind",
-  "version": "0.2.0",
-  "description": "Copy, edit, retry, or branch from any user message in a DSH session",
+  "version": "0.8.1",
+  "description": "Copy, edit, retry, or branch from any user message, and continue from any step of a turn, in a DSH session",
   "private": true,
   "type": "module",
   "main": "index.js",
