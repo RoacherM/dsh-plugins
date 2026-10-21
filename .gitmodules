@@ -46,3 +46,12 @@
 [submodule "whale-pet-plugin"]
 	path = whale-pet-plugin
 	url = https://github.com/RoacherM/whale-pet-plugin.git
+[submodule "issue-plugin"]
+	path = issue-plugin
+	url = https://github.com/RoacherM/issue-plugin.git
+[submodule "rewind-plugin"]
+	path = rewind-plugin
+	url = https://github.com/RoacherM/rewind-plugin.git
+[submodule "trajecable-plugin"]
+	path = trajecable-plugin
+	url = https://github.com/RoacherM/trajecable-plugin.git
